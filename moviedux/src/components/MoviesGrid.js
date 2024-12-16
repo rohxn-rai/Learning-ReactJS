@@ -1,40 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles.css';
 import MovieCard from './MovieCard';
 
-export default function MovieGrid() {
-  const [movies, setMovies] = useState([]);
+export default function MovieGrid({ movies, watchlist, toggleWatchlist }) {
+  // set up different filter and it's useState
   const [searchTerm, setSearchTerm] = useState('');
-
   const [genre, setGenre] = useState('All Genres');
   const [rating, setRating] = useState('All');
 
-  useEffect(() => {
-    fetch('movies.json')
-      .then(response => response.json())
-      .then(data => setMovies(data));
-  }, []);
-
+  // tigger for search filter
   const handleSearchChange = e => {
     setSearchTerm(e.target.value);
   };
 
+  // tigger for genre filter
   const handleGenreChange = e => {
     setGenre(e.target.value);
   };
 
+  // tigger for rating filter
   const handleRatingChange = e => {
     setRating(e.target.value);
   };
 
+  // logic for genre filter
   const matchesGenre = (movie, genre) => {
     return genre === 'All Genres' || movie.genre.toLowerCase() === genre.toLowerCase();
   };
 
+  // logic for search filter
   const matchesSearchTerm = (movie, searchTerm) => {
     return movie.title.toLowerCase().includes(searchTerm.toLowerCase());
   };
 
+  // logic for rating filter
   const macthesRating = (movie, rating) => {
     switch (rating) {
       case 'All':
@@ -50,6 +49,7 @@ export default function MovieGrid() {
     }
   };
 
+  // filtering calling
   const filteredMovies = movies.filter(
     movie =>
       matchesGenre(movie, genre) &&
@@ -57,6 +57,7 @@ export default function MovieGrid() {
       macthesRating(movie, rating)
   );
 
+  // Movie Grid front-end
   return (
     <div>
       <input
@@ -92,7 +93,12 @@ export default function MovieGrid() {
 
       <div className="movies-grid">
         {filteredMovies.map(movie => (
-          <MovieCard movie={movie} key={movie.id}></MovieCard>
+          <MovieCard
+            movie={movie}
+            key={movie.id}
+            toggleWatchlist={toggleWatchlist}
+            isWatchlisted={watchlist.includes(movie.id)}
+          />
         ))}
       </div>
     </div>
