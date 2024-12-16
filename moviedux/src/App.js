@@ -1,8 +1,8 @@
-import "./App.css";
-import "./styles.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import MovieGrid from "./components/MoviesGrid";
+import './App.css';
+import './styles.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import MovieGrid from './components/MoviesGrid';
 
 function App() {
   return (
