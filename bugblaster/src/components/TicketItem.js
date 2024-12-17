@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function TicketItem({ ticket, dispatch }) {
-  const { id, title, description, priority } = ticket;
+  // we are not using priority is not used here but is needed if we use it later on
+  const { id, title, description /*priority*/ } = ticket;
 
   const priorityClass = {
     1: "priority-low",
