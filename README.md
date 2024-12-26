@@ -34,7 +34,7 @@
   <li>Install all the node modules</li>
 </ol>
 <pre><code>npm install --force</code></pre>
-<p><code>--force</code> is used to avoid the warinings cause by different version of dependencies. Don't worry the versions mentioned in <code>package.json</code> work fine. It is just a warnings.</code></p>
+<p><code>--force</code> is used to avoid the warnings cause by different version of dependencies. Don't worry the versions mentioned in <code>package.json</code> work fine. It is just a warnings.</code></p>
 <ol start="7">
   <li>run the project</li>
 </ol>
