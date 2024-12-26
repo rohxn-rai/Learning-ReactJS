@@ -1,14 +1,6 @@
-﻿﻿<h1>Learning React</h1>
-<p>This repository is a collection of small projects I created during my learning of React from Udemy course by Jannick Leismann. This is only for my own reference but feel free to use this repository as you please. This course was about React only and the style sheet used here is premade. I am listing down the topics covered in this course.</p>
+﻿﻿<h1>Learning ReactJS</h1>
+<p>This repository is a collection of small projects I created during my learning of ReactJS from Udemy course by Jannick Leismann. This is only for my own reference but feel free to use this repository as you please. This course was about ReactJS only and the style sheet used here is premade. I am listing down the topics covered in this course.</p>
 <h3>Topics:</h3>
-
-<!-- <table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td>- Handling States<br>- Event Handling<br>- Searching<br>- Refactoring<br>- Filtering</td>
-    <td>- Sorting<br>- Reducer<br>- Context API<br>- Web API<br>- Router</td>
-  </tr>
-</table> -->
-
 
 ```text
 .
